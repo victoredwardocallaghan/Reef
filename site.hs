@@ -2,11 +2,18 @@
 {-# LANGUAGE OverloadedStrings #-}
 import           Data.Monoid (mappend)
 import           Hakyll
+--import qualified Text.Pandoc.Options as Pandoc.Options
 
 
 --------------------------------------------------------------------------------
 main :: IO ()
-main = hakyll $ do
+main = hakyllWith config $ do
+
+    -- copy site icon to `favicon.ico`
+    match "images/favicon.ico" $ do
+        route   (constRoute "favicon.ico")
+        compile copyFileCompiler
+
     match "images/*" $ do
         route   idRoute
         compile copyFileCompiler
@@ -16,24 +23,14 @@ main = hakyll $ do
         compile compressCssCompiler
 
     -- copy js bits
-    match "js/*" $ do
+    match "js/**" $ do
         route   idRoute
         compile copyFileCompiler
 
-    match "js/foundation/*" $ do
+    -- copy humans.txt and robots.txt to web root
+    match (fromList ["humans.txt", "robots.txt"]) $ do
         route   idRoute
         compile copyFileCompiler
-
-    match "js/vendor/*" $ do
-        route   idRoute
-        compile copyFileCompiler
-
-    -- copy robots.txt and humans.txt
-    match "*.txt" $ do
-        route   idRoute
-        compile copyFileCompiler
-
-    --match (fromList ["about.rst", "contact.markdown"]) $ do
 
     match "about.markdown" $ do
         route   $ setExtension "html"
@@ -97,3 +94,20 @@ postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" `mappend`
     defaultContext
+
+--------------------------------------------------------------------------------
+config :: Configuration
+config = defaultConfiguration
+        { deployCommand = "rsync -avz -e ssh ./_site/ username:/srv/www/example.com.au/" }
+
+
+--pandocWriterOptions :: Pandoc.Options.WriterOptions
+--pandocWriterOptions = defaultHakyllWriterOptions
+--                        { Pandoc.Options.writerHtml5 = True
+--                        , Pandoc.Options.writerHtmlQTags = True
+--                        --, Pandoc.Options.writerNumberSections = True
+--                        --, Pandoc.Options.writerNumberOffset = [1]
+--                        , Pandoc.Options.writerSectionDivs = True
+--                        , Pandoc.Options.writerTableOfContents = True
+--                    }
+--------------------------------------------------------------------------------
