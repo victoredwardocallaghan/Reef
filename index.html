@@ -2,15 +2,124 @@
 title: Home
 ---
 
-<h2>Welcome</h2>
 
-<img src="/images/haskell-logo.png" style="float: right; margin: 10px;" />
+<div class="row">
+  <div class="large-12 columns">
 
-<p>Welcome to my blog!</p>
+  <!-- Desktop Slider -->
 
-<p>I've reproduced a list of recent posts here for your reading pleasure:</p>
+    <div class="hide-for-small">
+      <div id="featured">
+            <img src="http://placehold.it/1000x400&text=Slide Image" alt="slide image">
+            <!-- <img src="http://placehold.it/1000x400&text=Slide Image" alt="slide image">
+            <img src="http://placehold.it/1000x400&text=Slide Image" alt="slide image"> -->
+        </div>
+      </div>
 
-<h2>Posts</h2>
-$partial("templates/post-list.html")$
+  <!-- End Desktop Slider -->
 
-<p>…or you can find more in the <a href="/archive.html">archives</a>.
+
+  <!-- Mobile Header -->
+
+
+  <div class="row">
+    <div class="small-12 show-for-small"><br>
+      <img src="http://placehold.it/1000x600&text=For Small Screens" />
+    </div>
+  </div>
+
+
+<!-- End Mobile Header -->
+
+  </div>
+</div><br>
+
+
+<div class="row">
+  <div class="large-12 columns">
+    <div class="row">
+
+  <!-- Thumbnails -->
+
+      <div class="large-3 small-6 columns">
+        <img src="http://placehold.it/250x250&text=Thumbnail" />
+        <h6 class="panel">Description</h6>
+      </div>
+
+      <div class="large-3 small-6 columns">
+        <img src="http://placehold.it/250x250&text=Thumbnail" />
+        <h6 class="panel">Description</h6>
+      </div>
+
+      <div class="large-3 small-6 columns">
+        <img src="http://placehold.it/250x250&text=Thumbnail" />
+        <h6 class="panel">Description</h6>
+      </div>
+
+      <div class="large-3 small-6 columns">
+        <img src="http://placehold.it/250x250&text=Thumbnail" />
+        <h6 class="panel">Description</h6>
+      </div>
+
+  <!-- End Thumbnails -->
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Main Content Section -->
+<div class="row">
+  <div class="large-12 columns">
+    <div class="row">
+
+  <!-- Content -->
+
+      <div class="large-8 columns">
+        <div class="panel radius">
+
+        <div class="row">
+        <div class="large-6 small-6 columns">
+
+          <h4>Friday Evening Ecology.</h4><hr/>
+          <h5 class="subheader">
+            We study tropical fish.....
+          </h5>
+
+        <div class="show-for-small" align="center">
+          <a href="#" class="small radius button">Call To Action!</a><br>
+
+          <a href="#" class="small radius button">Call To Action!</a>
+        </div>
+
+        </div>
+        <div class="large-6 small-6 columns">
+
+          <p>I've reproduced a list of recent posts here for your reading pleasure:</p>
+          $partial("templates/post-list.html")$
+          <p>…or you can find more in the
+          <a href="/archive.html" class="secondary small button">Archives &rarr;</a>.</p>
+
+      </div>
+
+      </div>
+      </div>
+      </div>
+
+        <div class="large-4 columns hide-for-small">
+
+        <h4>Get In Touch!</h4><hr/>
+
+        <a class="large button expand" href="/contact.html">
+          Contact us
+        </a>
+
+
+      </div>
+
+  <!-- End Content -->
+
+    </div>
+  </div>
+</div>
+<!-- End Main Content Section -->

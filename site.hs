@@ -15,7 +15,27 @@ main = hakyll $ do
         route   idRoute
         compile compressCssCompiler
 
-    match (fromList ["about.rst", "contact.markdown"]) $ do
+    -- copy js bits
+    match "js/*" $ do
+        route   idRoute
+        compile copyFileCompiler
+
+    match "js/foundation/*" $ do
+        route   idRoute
+        compile copyFileCompiler
+
+    match "js/vendor/*" $ do
+        route   idRoute
+        compile copyFileCompiler
+
+    -- copy robots.txt and humans.txt
+    match "*.txt" $ do
+        route   idRoute
+        compile copyFileCompiler
+
+    --match (fromList ["about.rst", "contact.markdown"]) $ do
+
+    match "about.markdown" $ do
         route   $ setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
@@ -27,6 +47,18 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
+
+    create ["contact.html"] $ do
+        route idRoute
+        compile $ do
+            let contactCtx =
+                    constField "title" "Contact"            `mappend`
+                    defaultContext
+
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/contact.html" contactCtx
+                >>= loadAndApplyTemplate "templates/default.html" contactCtx
+                >>= relativizeUrls
 
     create ["archive.html"] $ do
         route idRoute
