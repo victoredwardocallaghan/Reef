@@ -23,6 +23,7 @@ Protein Skimmers
 
  * [Wikipedia - Protein Skimmers](https://en.wikipedia.org/wiki/Protein_skimmer)
  * [What is Skimming?](http://www.reefkeeping.com/issues/2006-08/rhf/index.php)
+ * [Vertex alpha protein skimmers](https://www.youtube.com/watch?v=kZH3sSdGrtI)
 
 UV Sterilising
 --------------
@@ -40,3 +41,9 @@ Reactors
 # GFO Reactor #
 
  * [](http://www.reefkeeping.com/issues/2004-11/rhf)
+
+# Kalkwasser #
+
+ * [Kalkwasser](http://www.masa.asn.au/masawiki/index.php/Kalkwasser)
+ * [Using Kalkwasser - EP 3: Calcium, Alkalinity & Trace Elements in y..](https://www.youtube.com/watch?v=fCnqAnn0yxo)
+ * [DIY Kalk Dripper Kit from BulkReefSupply.com](https://www.youtube.com/watch?v=LhcuEQpLIfc&list=UUcJv2rQDivg8NwXIxydJ86A)

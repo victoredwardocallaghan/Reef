@@ -38,3 +38,4 @@ Useful URLs
 
  * [??](http://www.reefkeeping.com/issues/2002-12/rs/feature/index.php)
  * [??](http://reefbuilders.com)
+ * [Using Technology to Emulate the Sun and Reef - EP 1: Aquarium Lig](https://www.youtube.com/watch?v=nngna3WdYhs)

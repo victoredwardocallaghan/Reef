@@ -9,6 +9,8 @@ Manufacture
  * [ATI](http://www.atinorthamerica.com)
  * [Cobalt Aquatics](http://cobaltaquatics.com)
  * [Eheim](http://www.eheim.asia)
+ * [Reef Octopus](http://www.reefoctopus.com.au)
+ * [Vertex Aquaristik](http://www.vertexaquaristik.com)
 
 Suppliers
 ---------
