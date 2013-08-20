@@ -23,6 +23,7 @@ Protein Skimmers
 
  * [Wikipedia - Protein Skimmers](https://en.wikipedia.org/wiki/Protein_skimmer)
  * [What is Skimming?](http://www.reefkeeping.com/issues/2006-08/rhf/index.php)
+ * [Protein Skimmers - EP 3: Aquarium Filtration](https://www.youtube.com/watch?v=WevOsQ_LWqE)
  * [Vertex alpha protein skimmers](https://www.youtube.com/watch?v=kZH3sSdGrtI)
 
 UV Sterilising
